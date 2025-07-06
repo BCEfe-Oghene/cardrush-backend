@@ -9,9 +9,9 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-const authRoutes = require("./routes/auth");
-const walletRoutes = require("./routes/wallet");
-const adminRoutes = require("./routes/admin");
+const authRoutes = require('./routes/auth');
+const walletRoutes = require('./routes/wallet');
+const adminRoutes = require('./routes/admin');
 app.use("/api/auth", authRoutes);
 app.use("/api/wallet", walletRoutes);
 app.use("/api/admin", adminRoutes);
