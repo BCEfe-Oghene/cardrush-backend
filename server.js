@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const walletRoutes = require('./routes/wallet');
+const walletRoutes = require('./models/wallet');
 const bodyParser = require('body-parser');
 const webhookRoutes = require('./routes/webhookRoutes');
 
@@ -26,6 +26,7 @@ app.use(express.json());
 app.use('/api/wallet', walletRoutes);
 app.use('/api/wallet', walletRoutes);
 app.use('/api/webhook', webhookRoutes);
+app.use('/api/wallet', require('./routes/wallet'));
 
 // Sample route
 app.get('/', (req, res) => {
